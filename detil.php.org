@@ -41,6 +41,13 @@
     <span class="icon text-white-50">
       <i class="fas fa-arrow-left"></i></span>
   <span class="text">kembali</span></a>
+
+  <a href="proses.php?id=<?php echo $data['id_pengaduan'] ?>" class="btn btn-danger btn-icon-split" onclick="return confirm('yakin akan di proses?')">
+    <span class="icon text-white-50">
+      <i class="fas fa-check"></i></span>
+  <span class="text">Proses Verifikasi</span></a>
+    </div>
+
   
     <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
     

@@ -16,7 +16,7 @@ if ($sql)
 	?>
 	<script type="text/javascript">
 		alert('Data sudah ditanggapi');
-		window.location="admin.php?url=verifikasit_laporan";
+		window.location="petugas.php?url=verifikasit_laporan";
 	</script>
 <?php
 }

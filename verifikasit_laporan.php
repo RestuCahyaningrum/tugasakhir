@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>PEMAS</title>
+  <title>SB Admin 2 - Tables</title>
 
   <!-- Custom fonts for this template -->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -47,7 +47,7 @@
                   </thead>
                   <?php 
                     require '../koneksi.php';
-                    $sql=mysqli_query($GLOBALS["___mysqli_ston"], "select * from pengaduan where status='proses' ");
+                    $sql=mysqli_query($GLOBALS["___mysqli_ston"], "select * from pengaduan where status='0' ");
                     while ($data=mysqli_fetch_array($sql)) {   
                     
                    ?>
@@ -62,10 +62,10 @@
                       <td>
                         
                            <a href="?url=detil&id=<?php echo $data['id_pengaduan']; ?>" class="btn btn-info btn-circle">
-                             <i class="fas fa-info"></i>
-                           </a>
-                           <a href="?url=tanggapan&id=<?php echo $data['id_pengaduan']; ?>" class="btn btn-danger btn-circle">
                              <i class="fas fa-check"></i>
+                           </a>
+                           <a href="?url=tanggapan_petugas&id=<?php echo $data['id_pengaduan']; ?>" class="btn btn-danger btn-circle">
+                             <i class="fas fa-book"></i>
                            </a>
                           
                       </td>
@@ -84,13 +84,13 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <!-- <footer class="sticky-footer bg-white">
+      <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; Your Website 2019</span>
           </div>
         </div>
-      </footer> -->
+      </footer>
       <!-- End of Footer -->
 
     </div>
